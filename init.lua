@@ -9,7 +9,7 @@ if not component.isAvailable("internet") then
   return
 end
 
-function wget(url, filename)
+function wget(url, filename, quiet, force)
   if not filename then
     filename = url
     local index = string.find(filename, "/[^/]*$")
@@ -23,7 +23,7 @@ function wget(url, filename)
   end
   filename = text.trim(filename)
   if filename == "" then
-    if not options.Q then
+    if not quiet then
       io.stderr:write("could not infer filename, please specify one")
     end
     return nil, "missing target filename" -- for programs using wget as a function
@@ -33,8 +33,8 @@ function wget(url, filename)
   local preexisted
   if fs.exists(filename) then
     preexisted = true
-    if not options.f then
-      if not options.Q then
+    if not force then
+      if not quiet then
         io.stderr:write("file already exists")
       end
       return nil, "file already exists" -- for programs using wget as a function
@@ -43,7 +43,7 @@ function wget(url, filename)
 
   local f, reason = io.open(filename, "a")
   if not f then
-    if not options.Q then
+    if not quiet then
       io.stderr:write("failed opening file for writing: " .. reason)
     end
     return nil, "failed opening file for writing: " .. reason -- for programs using wget as a function
@@ -51,7 +51,7 @@ function wget(url, filename)
   f:close()
   f = nil
 
-  if not options.q then
+  if not quiet then
     io.write("Downloading... ")
   end
   local result, response = pcall(internet.request, url, nil, {["user-agent"]="Wget/OpenComputers"})
@@ -66,7 +66,7 @@ function wget(url, filename)
       end
     end)
     if not result then
-      if not options.q then
+      if not quiet then
         io.stderr:write("failed.\n")
       end
       if f then
@@ -75,12 +75,12 @@ function wget(url, filename)
           fs.remove(filename)
         end
       end
-      if not options.Q then
+      if not quiet then
         io.stderr:write("HTTP request failed: " .. reason .. "\n")
       end
       return nil, reason -- for programs using wget as a function
     end
-    if not options.q then
+    if not quiet then
       io.write("success.\n")
     end
 
@@ -88,14 +88,14 @@ function wget(url, filename)
       f:close()
     end
 
-    if not options.q then
+    if not quiet then
       io.write("Saved data to " .. filename .. "\n")
     end
   else
-    if not options.q then
+    if not quiet then
       io.write("failed.\n")
     end
-    if not options.Q then
+    if not quiet then
       io.stderr:write("HTTP request failed: " .. response .. "\n")
     end
     return nil, response -- for programs using wget as a function
@@ -103,4 +103,4 @@ function wget(url, filename)
   return true -- for programs using wget as a function
 end
 
-wget("https://github.com/darrinmwiley/open_computer_code/blob/master/oc_get.lua", "please.lua")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/helloworld.lua", "helloworld.lua", false, false)
