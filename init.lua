@@ -103,4 +103,4 @@ function wget(url, filename, quiet, force)
   return true -- for programs using wget as a function
 end
 
-wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/helloworld.lua", "helloworld.lua", true, true)
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/helloworld.lua", "helloworld.lua", false, false)
