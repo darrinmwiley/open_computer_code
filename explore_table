@@ -1,4 +1,4 @@
-function exploreTable(tbl, prefix)
+local function exploreTable(tbl, prefix)
   prefix = prefix or ""
   for k,v in pairs(tbl) do
     if type(v) == "table" then
@@ -11,3 +11,9 @@ function exploreTable(tbl, prefix)
     end
   end
 end
+
+local function str_startswith(str, start)
+  return string.sub(str, 1, string.len(start)) == start
+end
+
+return {exploreTable = exploreTable, str_startswith = str_startswith}
