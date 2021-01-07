@@ -1,5 +1,5 @@
 --currently assumes the orientation of the machine to be fixed
-local function setBonsai(int n)
+local function setBonsai(n)
 
   local utils = require("utils")
   local component = require("component")
