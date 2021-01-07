@@ -16,4 +16,13 @@ local function str_startswith(str, start)
   return string.sub(str, 1, string.len(start)) == start
 end
 
-return {exploreTable = exploreTable, str_startswith = str_startswith}
+local function getAddress(name)
+  local component = require("component")
+  for k,v in component.list() do
+    if v == component_name then
+      return k
+    end
+  end
+end
+
+return {exploreTable = exploreTable, str_startswith = str_startswith, getAddress = getAddress}
