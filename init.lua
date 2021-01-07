@@ -113,4 +113,7 @@ print("fetching invoke.lua")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/invoke.lua", "invoke.lua", true, true)
 print("fetching utilities")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/utils.lua","utils.lua",true,true)
+print("fetching test script")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/test.lua", "test.lua", true, true)
+
 
