@@ -116,6 +116,6 @@ wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/u
 print("fetching test script")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/test.lua", "test.lua", true, true)
 print("fetching bonsai controller")
-wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/set_bonsai.lua", "set_bonsai", true, true)
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/set_bonsai.lua", "set_bonsai.lua", true, true)
 
 
