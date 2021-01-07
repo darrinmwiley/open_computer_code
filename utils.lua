@@ -19,7 +19,7 @@ end
 local function getAddress(name)
   local component = require("component")
   for k,v in component.list() do
-    if v == component_name then
+    if v == name then
       return k
     end
   end
