@@ -115,5 +115,9 @@ print("fetching test script")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/test.lua", "test.lua", true, true)
 print("fetching bonsai controller")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/bonsai_control", "bonsai_control.lua", true, true)
+print("fetching address data")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/addr_db", "/data/addr_db",true,true)
+print("fetching sapling data")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/sapling_db", "/data/sapling_db",true,true)
 
 
