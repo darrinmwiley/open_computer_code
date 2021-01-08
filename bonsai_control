@@ -20,9 +20,9 @@ local function setBonsai(n)
   redstone.setOutput(sides.west, 0)
 
   redstone.setOutput(sides.south, 0)
-  os.sleep()
+  os.sleep(1)
   redstone.setOutput(sides.south, 15)
-  os.sleep()
+  os.sleep(1)
   redstone.setOutput(sides.south, 0)
  
 end
