@@ -11,7 +11,7 @@ local function setBonsai(n)
 
   db_addr = utils.getAddress("database")
 
-  export_bus.setExportConfiguration(5,1,db_addr, args[1])
+  export_bus.setExportConfiguration(5,1,db_addr, n)
 
   redstone.setOutput(sides.west, 0)
   os.sleep(1)
