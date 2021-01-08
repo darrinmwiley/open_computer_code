@@ -21,6 +21,6 @@ args = {...}
 name = args[1]
 message = args[2]
 
-m.send(addr_tab[name], message)
+m.send(addr_tab[name], 123, message)
   
   
