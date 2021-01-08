@@ -103,8 +103,6 @@ function wget(url, filename, quiet, force)
   return true -- for programs using wget as a function
 end
 
-print("fetching helloworld.lua")
-wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/helloworld.lua", "helloworld.lua", true, true)
 print("fetching list_components.lua")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/list_components.lua", "list_components.lua", true, true)
 print("fetching get_methods.lua")
