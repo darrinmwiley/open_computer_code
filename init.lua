@@ -119,5 +119,7 @@ print("fetching address data")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/addr_db", "addr_db",true,true)
 print("fetching sapling data")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/sapling_db", "sapling_db",true,true)
+print("fetching set bonsai script")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/set_bonsai.lua", "set_bonsai.lua", true, true)
 
 
