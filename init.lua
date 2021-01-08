@@ -116,8 +116,8 @@ wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/t
 print("fetching bonsai controller")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/bonsai_control", "bonsai_control.lua", true, true)
 print("fetching address data")
-wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/addr_db", "/data/addr_db",true,true)
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/addr_db", "addr_db",true,true)
 print("fetching sapling data")
-wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/sapling_db", "/data/sapling_db",true,true)
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/data/sapling_db", "sapling_db",true,true)
 
 
