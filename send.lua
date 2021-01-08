@@ -9,6 +9,7 @@ end
 
 for i = 1,ct-1, 2 do
   addr_tab[arr[i]] = arr[i+1]
+end
   
 local component = require("component")
 local event = require("event")
