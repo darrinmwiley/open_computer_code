@@ -1,5 +1,5 @@
-local bonsai control = require("bonsai_control")
 function set_bonsai(name)
+  local bonsai_control = require("bonsai_control")
   local utils = require("utils")
   
   local addr_tab = {}
