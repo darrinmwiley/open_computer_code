@@ -125,5 +125,7 @@ print("fetching listener script")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/bonsai_listen.lua", "bonsai_listen.lua", true, true)
 print("fetching send script")
 wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/send.lua", "send.lua", true, true)
+print("fetching bonsai factory init")
+wget("https://raw.githubusercontent.com/darrinmwiley/open_computer_code/master/bonsai_factory/bonsai_worker_init.lua","bonsai_worker_init.lua" true, true)
 
 
