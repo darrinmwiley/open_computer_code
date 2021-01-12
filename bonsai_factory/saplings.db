@@ -92,10 +92,10 @@ iron
 sky_orchards:sapling_iron
 0.0
 gold
-sky_orchard:sapling_gold
+sky_orchards:sapling_gold
 0.0
 lapis
-sky_orchard:sapling_lapis
+sky_orchards:sapling_lapis
 0.0
 redstone
 sky_orchards:sapling_redstone
