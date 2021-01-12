@@ -64,7 +64,7 @@ function wget(url, filename, quiet, force)
         end
         f:write(chunk)
       end
-    end
+    end)
     if not result then
       if not quiet then
         io.stderr:write("failed.\n")
