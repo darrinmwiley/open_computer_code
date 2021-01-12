@@ -4,7 +4,7 @@ local tab = {}
 
 local ct = 1
 
-for line in io.lines("sapling.db") do
+for line in io.lines("saplings.db") do
   tab[ct] = line
   ct = ct + 1
 end
