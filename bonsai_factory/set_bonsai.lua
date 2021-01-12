@@ -13,7 +13,7 @@ local function set_bonsai(place_dir, break_dir, bus_dir, resource)
   index = sap[resource]
   
   if index ~= nil then
-    bus.setExportConfiguration(bus_dir,1,db_addr, n)
+    bus.setExportConfiguration(bus_dir,1,db_addr, index)
     --precondition of the redstone default outputs being on for place_dir and break_dir
     redstone.setOutput(break_dir, 0)
     os.sleep(.021)
