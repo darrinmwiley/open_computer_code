@@ -1,4 +1,4 @@
-function set_bonsai(place_dir, break_dir, bus_dir, resource)
+local function set_bonsai(place_dir, break_dir, bus_dir, resource)
   local utils = require("utils")
   local component = require("component")
   local sap = require("db_util")
@@ -21,3 +21,5 @@ function set_bonsai(place_dir, break_dir, bus_dir, resource)
     redstone.setOutput(place_dir,15)
   end
 end
+
+return {setBonsai = set_bonsai}
