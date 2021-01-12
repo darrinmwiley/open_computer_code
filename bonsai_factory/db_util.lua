@@ -9,19 +9,11 @@ for line in io.lines("saplings.db") do
   ct = ct + 1
 end
 
-local sap_dmg = {}
-local sap_name = {}
+local namedmg_id = {}
 
 for i = 1,ct-1,3 do
-  local id = tab[i]
-  local name = tab[i+1]
-  local dmg = tab[i+2]
-  print(id)
-  print(name)
-  print(dmg)
-  print()
-  sap_dmg[id] = dmg
-  sap_name[id] = name
+  local namedmg = tab[i+1]..tostring(tab[i+2])
+  local namedmg_id[namedmg] = tab[i]
 end
 
 local sap = {}
@@ -31,11 +23,11 @@ local db = component.database;
 for i = 1, 81, 1 do
   local s = db.get(i)
   if s ~= nil then
-    for k, v in pairs(sap_dmg) do
-      if sap_name[k] == s.name and sap_dmg[k] == s.damage then
-        sap[k] = i
-      end
-    end
+    local namedmg = s.name..tostring(s.damage)
+    print(namedmg)
+    print(i)
+    print()
+    sap[namedmg_id[namedmg]] = i
   end
 end
 
