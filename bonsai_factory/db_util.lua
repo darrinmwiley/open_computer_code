@@ -13,7 +13,7 @@ local namedmg_id = {}
 
 for i = 1,ct-1,3 do
   local namedmg = tab[i+1]..tostring(tab[i+2])
-  local namedmg_id[namedmg] = tab[i]
+  namedmg_id[namedmg] = tab[i]
 end
 
 local sap = {}
