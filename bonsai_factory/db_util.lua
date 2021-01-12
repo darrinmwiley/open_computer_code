@@ -24,15 +24,8 @@ for i = 1, 81, 1 do
   local s = db.get(i)
   if s ~= nil then
     local namedmg = s.name..tostring(s.damage)
-    print(namedmg)
-    print(i)
-    print()
     sap[namedmg_id[namedmg]] = i
   end
 end
 
-for k, v in pairs(sap) do
-  print(k)
-  print(v)
-  print()
-end
+return sap
