@@ -7,6 +7,9 @@ local function set_bonsai(place_dir, break_dir, bus_dir, resource)
   
   db_addr = utils.getAddress("database")
 
+  print("resource is "..resource)
+  print(sap[resource])
+  
   index = sap[resource]
   
   if index ~= nil then
