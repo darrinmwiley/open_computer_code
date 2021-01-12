@@ -1,16 +1,14 @@
-PORT = 549
+local send = function(PORT, id, resource)
+    local component = require("component")
+    local m = component.modem
 
-local component = require("component")
-local m = component.modem
+    function lpad(str, len, char)
+        return string.rep(char, len - #str) .. str
+    end
 
-function lpad(str, len, char)
-    return string.rep(char, len - #str) .. str
+    id2 = lpad(id,3,'0')
+
+    m.broadcast(PORT, id2..resource)
 end
 
-args = {...}
-id = lpad(args[1],3,')')
-resource = args[2]
-
-print(port.." "..resource)
-
-m.broadcast(id, PORT, resource)
+return {send = send}
