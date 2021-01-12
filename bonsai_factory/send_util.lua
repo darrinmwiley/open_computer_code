@@ -1,0 +1,16 @@
+PORT = 549
+
+local component = require("component")
+local m = component.modem
+
+function lpad(str, len, char)
+    return string.rep(char, len - #str) .. str
+end
+
+args = {...}
+id = lpad(args[1],3,')')
+resource = args[2]
+
+print(port.." "..resource)
+
+m.broadcast(id, PORT, resource)
